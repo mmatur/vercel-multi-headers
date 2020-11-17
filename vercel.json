@@ -1,0 +1,20 @@
+{
+  "version": 2,
+  "github": {
+    "silent": true,
+    "enabled": true
+  },
+  "regions": ["dub1"],
+  "builds": [
+    {
+      "src": "handlers/handler.go",
+      "use": "@now/go"
+    }
+  ],
+  "rewrites": [
+    {
+      "source": "/(.*)",
+      "destination": "/handlers/handler.go"
+    }
+  ]
+}
